@@ -1,29 +1,34 @@
-import React from "react";
-import Sidebar from "./ProfileCard";
+import Accordion from "./components/Accordion";
+import ButtonPage from "./pages/ButtonPage";
 
-const items = [
-  { name: "home", label: "Home" },
-  {
-    name: "billing",
-    label: "Billing",
-    items: [
-      { name: "statements", label: "Statements" },
-      { name: "reports", label: "Reports" },
-    ],
-  },
-  {
-    name: "settings",
-    label: "Settings",
-    items: [{ name: "profile", label: "Profile" }],
-  },
-];
+const App = () => {
+  const items = [
+    {
+      id: 1,
+      label: "Can I use React on a project?",
+      content:
+        "You can use React on any project you want. You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.",
+    },
+    {
+      id: 2,
+      label: "Can I use Javascript on a project?",
+      content:
+        "You can use React on any project you want. You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.",
+    },
+    {
+      id: 3,
+      label: "Can I use CSS on a project?",
+      content:
+        "You can use React on any project you want. You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.",
+    },
+  ];
 
-function App() {
   return (
     <div>
-      <Sidebar items={items} />
+      {/* <ButtonPage /> */}
+      <Accordion items={items} />
     </div>
   );
-}
+};
 
 export default App;
