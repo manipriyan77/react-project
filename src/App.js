@@ -1,32 +1,27 @@
-import Accordion from "./components/Accordion";
-import ButtonPage from "./pages/ButtonPage";
+import DropDown from "./components/DropDown";
 
 const App = () => {
-  const items = [
+  const options = [
     {
-      id: 1,
-      label: "Can I use React on a project?",
-      content:
-        "You can use React on any project you want. You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.",
+      label: "Red",
+      value: "red",
     },
     {
-      id: 2,
-      label: "Can I use Javascript on a project?",
-      content:
-        "You can use React on any project you want. You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.",
+      label: "Blue",
+      value: "blue",
     },
     {
-      id: 3,
-      label: "Can I use CSS on a project?",
-      content:
-        "You can use React on any project you want. You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.",
+      label: "Green",
+      value: "green",
+    },
+    {
+      label: "Yellow",
+      value: "yellow",
     },
   ];
-
   return (
     <div>
-      {/* <ButtonPage /> */}
-      <Accordion items={items} />
+      <DropDown options={options} />
     </div>
   );
 };
